@@ -1,0 +1,90 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title> Website Design MLSA</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="main">
+            <nav>
+                <div class="logo"> 
+                    <img src="images/logoclear.png">
+                </div>
+                <div class="nav-links"> 
+                    <ul> 
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Academics</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class ="information">
+                <div class="overlay"></div>
+                <img src="images/logoclear.png" class="violet">
+                <div id="circle">
+                    <div class="feature one">
+                        <img src="images/meet.png">
+                        <div>
+                            <h1>Meet Our Faculty</h1>
+                        </div>
+                    </div>
+                    <div class="feature two">
+                        <img src="images/achiv.png">
+                        <div>
+                            <h1>Achivements</h1>
+                        </div>
+                    </div>
+                    <div class="feature three">
+                        <img src="images/infra.png">
+                        <div>
+                            <h1>Infrastructure</h1>
+                        </div>
+                    </div>
+                    <div class="feature four">
+                        <img src="images/fee.png">
+                        <div>
+                            <h1>Fee Structure</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="controls">
+                <img src="images/arrow.png" id="upBtn">
+                <h3>Features</h3>
+                <img src="images/arrow.png" id="doBtn">
+            </div>
+
+        </div>
+
+        <script>
+            var circle=document.getElementById("circle");
+            var upBtn=document.getElementById("upBtn");
+            var doBtn=document.getElementById("doBtn");
+
+            var rotateValue=circle.style.transform;
+            var rotateSum;
+
+            upBtn.onclick=function()
+            {
+                rotateSum=rotateValue +"rotate(-90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue=rotateSum; 
+            }
+
+            doBtn.onclick=function()
+            {
+                rotateSum=rotateValue +"rotate(90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue=rotateSum; 
+            }
+
+        </script>
+    </body>
+    </html>
